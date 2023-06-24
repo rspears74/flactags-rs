@@ -133,15 +133,9 @@ impl Tag {
 
 impl Display for Tag {
   fn fmt(&self, f: &mut Formatter) -> fmt::Result {
+    let keys = self.meta_tag.vorbis_comments().unwrap().comments.keys();
     write!(f, "file: {:?}\n", self.file_info.file_name())?;
-    vec![
-        constants::ARTIST,
-        constants::ALBUM,
-        constants::TITLE,
-        constants::TRACK_NUMBER,
-        constants::GENRE,
-        constants::DATE,
-    ].iter()
+    keys
       .map(|s| self.write_key(s, f))
       .collect::<Result<(), _>>()
   }
