@@ -8,7 +8,8 @@ use flactags::constants::{
     ARTIST,
     ALBUM,
     GENRE,
-    TRACK_NUMBER
+    TRACK_NUMBER,
+    DISC_NUMBER
 };
 
 
@@ -56,6 +57,10 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     if args.track_numbers {
         interactive.edit_tags(TRACK_NUMBER)?;
+    }
+
+    if args.disc_numbers {
+        interactive.edit_tags(DISC_NUMBER)?;
     }
 
     editor.save()?;

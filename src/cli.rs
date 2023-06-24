@@ -18,4 +18,6 @@ pub struct Cli {
     pub titles: bool,
     #[arg(action, long)]
     pub track_numbers: bool,
+    #[arg(action, long)]
+    pub disc_numbers: bool,
 }
