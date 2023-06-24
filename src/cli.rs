@@ -11,6 +11,8 @@ pub struct Cli {
     #[arg(long)]
     pub artist: Option<String>,
     #[arg(long)]
+    pub album_artist: Option<String>,
+    #[arg(long)]
     pub genre: Option<String>,
     #[arg(long)]
     pub year: Option<String>,

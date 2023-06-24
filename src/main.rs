@@ -9,7 +9,8 @@ use flactags::constants::{
     ALBUM,
     GENRE,
     TRACK_NUMBER,
-    DISC_NUMBER
+    DISC_NUMBER,
+    ALBUM_ARTIST
 };
 
 
