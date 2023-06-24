@@ -2,7 +2,7 @@ use clap::Parser;
 
 use std::error::Error;
 use flactags::cli::Cli;
-use flactags::utils::{ Tag, TagEditor, InteractiveTagEditor };
+use flactags::utils::{TagEditor, InteractiveTagEditor};
 use flactags::constants::{
     TITLE,
     ARTIST,

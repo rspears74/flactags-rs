@@ -4,7 +4,6 @@ use std::fmt::{Display, Formatter};
 use std::fmt;
 use std::io::{self, Write};
 use std::error;
-use crate::constants;
 
 pub struct TagEditor {
   tags: Vec<Tag>
