@@ -46,6 +46,13 @@ fn main() -> Result<(), Box<dyn Error>> {
         )
     }
 
+    if args.album_artist.is_some() {
+        editor.set_tags(
+            ALBUM_ARTIST,
+            &args.album_artist.unwrap()
+        )
+    }
+
     if args.print {
         editor.print_tags();
     }
@@ -62,7 +69,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     if args.disc_numbers {
         interactive.edit_tags(DISC_NUMBER)?;
-    }
+    }    
 
     editor.save()?;
 
