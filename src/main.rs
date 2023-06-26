@@ -10,7 +10,8 @@ use flactags::constants::{
     GENRE,
     TRACK_NUMBER,
     DISC_NUMBER,
-    ALBUM_ARTIST
+    ALBUM_ARTIST,
+    DATE
 };
 
 
@@ -53,6 +54,13 @@ fn main() -> Result<(), Box<dyn Error>> {
         )
     }
 
+    if args.date.is_some() {
+        editor.set_tags(
+            DATE,
+            &args.date.unwrap()
+        )
+    }
+
     if args.print {
         editor.print_tags();
     }
@@ -69,7 +77,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     if args.disc_numbers {
         interactive.edit_tags(DISC_NUMBER)?;
-    }    
+    }
 
     editor.save()?;
 

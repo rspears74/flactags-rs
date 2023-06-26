@@ -15,7 +15,7 @@ pub struct Cli {
     #[arg(long)]
     pub genre: Option<String>,
     #[arg(long)]
-    pub year: Option<String>,
+    pub date: Option<String>,
     #[arg(action, long)]
     pub titles: bool,
     #[arg(action, long)]
